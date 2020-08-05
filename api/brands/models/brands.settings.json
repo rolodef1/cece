@@ -1,0 +1,54 @@
+{
+  "kind": "collectionType",
+  "collectionName": "brands",
+  "info": {
+    "name": "Brand"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "plan": {
+      "via": "brands",
+      "model": "plans"
+    },
+    "categories": {
+      "collection": "categories",
+      "via": "brands",
+      "dominant": true
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "logo": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "url": {
+      "type": "string",
+      "required": true
+    },
+    "priority": {
+      "type": "integer",
+      "required": true,
+      "default": 1,
+      "min": 1
+    },
+    "promotions": {
+      "via": "brand",
+      "collection": "promotion"
+    }
+  }
+}

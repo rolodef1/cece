@@ -1,0 +1,54 @@
+{
+  "kind": "collectionType",
+  "collectionName": "plans",
+  "info": {
+    "name": "Plan"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "brands": {
+      "collection": "brands",
+      "via": "plan"
+    },
+    "priority": {
+      "type": "integer",
+      "default": 1,
+      "required": true,
+      "min": 1
+    },
+    "ad": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "ad_url": {
+      "type": "string"
+    },
+    "backgrounds": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "styles": {
+      "type": "json"
+    }
+  }
+}

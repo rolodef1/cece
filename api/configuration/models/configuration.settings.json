@@ -1,0 +1,50 @@
+{
+  "kind": "singleType",
+  "collectionName": "configurations",
+  "info": {
+    "name": "Configuration"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "start_date": {
+      "type": "datetime",
+      "required": true
+    },
+    "ending_date": {
+      "type": "datetime",
+      "required": true
+    },
+    "logo": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "comunications": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "backgrounds": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}

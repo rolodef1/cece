@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "categories",
+  "info": {
+    "name": "Category"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "brands": {
+      "via": "categories",
+      "collection": "brands"
+    },
+    "Icon": {
+      "type": "string",
+      "required": true
+    },
+    "priority": {
+      "type": "integer",
+      "required": true,
+      "default": 1,
+      "min": 1
+    }
+  }
+}

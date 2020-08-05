@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "promotions",
+  "info": {
+    "name": "Promotion"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "detail": {
+      "type": "text",
+      "required": true
+    },
+    "url": {
+      "type": "string",
+      "required": true
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "brand": {
+      "model": "brands",
+      "via": "promotions"
+    },
+    "priority": {
+      "type": "integer",
+      "default": 1,
+      "required": true,
+      "min": 1
+    }
+  }
+}
