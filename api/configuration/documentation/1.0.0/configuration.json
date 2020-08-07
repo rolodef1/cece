@@ -516,6 +516,9 @@
                 }
               }
             }
+          },
+          "coorganizadores": {
+            "type": "object"
           }
         }
       },
@@ -530,6 +533,9 @@
           },
           "ending_date": {
             "type": "datetime"
+          },
+          "coorganizadores": {
+            "type": "object"
           }
         }
       }
