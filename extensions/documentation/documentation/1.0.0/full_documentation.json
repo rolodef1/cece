@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "08/10/2020 2:41:03 PM"
+    "x-generation-date": "08/12/2020 4:55:27 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -5773,7 +5773,6 @@
             "items": {
               "required": [
                 "id",
-                "detail",
                 "url",
                 "image",
                 "priority"
@@ -6449,7 +6448,6 @@
       "Promotion": {
         "required": [
           "id",
-          "detail",
           "url",
           "image",
           "priority"
@@ -6577,7 +6575,6 @@
       },
       "NewPromotion": {
         "required": [
-          "detail",
           "url",
           "priority"
         ],

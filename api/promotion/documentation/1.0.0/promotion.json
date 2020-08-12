@@ -517,7 +517,6 @@
       "Promotion": {
         "required": [
           "id",
-          "detail",
           "url",
           "image",
           "priority"
@@ -645,7 +644,6 @@
       },
       "NewPromotion": {
         "required": [
-          "detail",
           "url",
           "priority"
         ],
