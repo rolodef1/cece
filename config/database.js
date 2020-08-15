@@ -11,9 +11,12 @@ module.exports = ({ env }) => ({
         database: env('DATABASE_NAME', 'cyberday'),
         username: env('DATABASE_USERNAME', 'root'),
         password: env('DATABASE_PASSWORD', ''),
+        schema: 'public',
         ssl: env.bool('DATABASE_SSL', false),
       },
-      options: {}
+      options: {
+        "debug": true
+      }
     },
   },
 });
