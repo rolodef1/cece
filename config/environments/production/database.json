@@ -11,8 +11,8 @@
           "database": "${process.env.DATABASE_NAME}",
           "username": "${process.env.DATABASE_USERNAME}",
           "password": "${process.env.DATABASE_PASSWORD}",
-          "ssl": { "rejectUnauthorized": false },
-          "sslmode": "${process.env.DATABASE_SSLMODE}"
+          "ssl": { "rejectUnauthorized": true },
+          "sslmode": "require"
         },
         "options": {}
       }
