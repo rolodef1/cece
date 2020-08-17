@@ -1,3 +1,14 @@
 const strapi = require('strapi');
+const throng = require('throng');
 
-strapi(/* {...} */).start();
+const WORKERS = process.env.WEB_CONCURRENCY || 1
+const PORT = process.env.PORT || 3000
+
+throng({
+  workers: WORKERS,
+  lifetime: Infinity
+}, start)
+
+function start() {
+    strapi(/* {...} */).start();
+}
